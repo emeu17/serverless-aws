@@ -7,7 +7,8 @@ be suitable for running a smaller serverless application?
 ## Available Links
 - baseurl/v1/user - register a new user
 - baseurl/v1/user/login - login a new user
-- baseurl/v1/test - test route only available with valid token
+- baseurl/v1/test - test route with simple message returned
+- baseurl/v1/auth - test route only available with valid token, returns message and provider
 
 # Todo in order to run on aws
 
