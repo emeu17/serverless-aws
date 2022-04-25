@@ -92,6 +92,15 @@ functions:
                     application/json: ${file(src/schema/create_user_request.json)}
   # authorizer states that it will first run that function, if it is "approved"
   # then it will run execute the function in the handler
+  authFunction:
+    handler: src/functions/authFunction.authFunction
+    events:
+        - http:
+            method: get
+            cors: true
+            path: /v1/auth
+            authorizer: validate
+  # test get-route for retrieving some simple data
   testFunction:
     handler: src/functions/testFunction.testFunction
     events:
@@ -99,7 +108,6 @@ functions:
             method: get
             cors: true
             path: /v1/test
-            authorizer: validate
 
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
