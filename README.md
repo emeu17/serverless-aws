@@ -16,7 +16,7 @@ be suitable for running a smaller serverless application?
 - Create an AWS account and create an IAM User according to https://www.serverless.com/framework/docs/providers/aws/guide/credentials
 - Download this repository and run *npm install*
 - Run *serverless deploy*
-- The environmental variable JWT_SECRET needs to be added through the serverless dashboard in the deployed app.
+- The environmental variable JWT_SECRET needs to be added through the serverless dashboard in the deployed app (to authenticate tokens)
 
 
 ### Changes
@@ -24,3 +24,4 @@ be suitable for running a smaller serverless application?
 tutorial followed from the Serverless channel https://www.youtube.com/watch?v=XTJImzRH8aY&list=PLIIjEI2fYC-BZliSOIhWUqiiwadhCvewg with aid of documentation https://www.serverless.com/framework/docs/providers/aws
 
 2022-04-25 First commit to github with above mentioned structure
+2022-05-28 Updated createUser so that CORS allows all origins.
